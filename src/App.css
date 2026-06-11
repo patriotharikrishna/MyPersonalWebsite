@@ -1,0 +1,77 @@
+body{
+  background-color: rgb(23, 22, 22);
+}
+
+/* .App {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background-color: rgba(15, 23, 42, 0.92);
+  color: #e2e8f0;
+  backdrop-filter: blur(16px);
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  position: relative;
+} */
+
+.App > *:not(.mainContent) {
+  transition: filter 0.25s ease, opacity 0.25s ease;
+}
+
+.mainContent {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: flex-start;
+  background-color: rgba(15, 23, 42, 0.95);
+  border-radius: 16px;
+  padding: 22px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 20px;
+}
+.bio > .mainContent{
+  margin: 30px;
+}
+.App:hover > .mainContent {
+  transform: scale(1.03);
+  box-shadow: 0 36px 90px rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.App:hover > *:not(.mainContent) {
+  filter: blur(4px);
+  opacity: 0.75;
+}
+
+.dpImage {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bio {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.85);
+  line-height: 1.75;
+  font-size: 1rem;
+  max-width: 38rem;
+  opacity: 0.95;
+}
+.MyName{
+  font: instrument serif;
+}
+
+
