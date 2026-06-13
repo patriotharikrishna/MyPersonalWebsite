@@ -109,6 +109,83 @@ body {
   max-width: 60rem;
 }
 
+.projectContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 18px 0 0;
+}
+
+.projectImageWrapper {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+  max-width: 520px;
+}
+
+.projectHeroImage {
+  width: 100%;
+  max-width: 520px;
+  min-width: 320px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  border: 1px solid rgba(226, 232, 240, 0.16);
+}
+
+.imageProgress {
+  width: 100%;
+  height: 4px;
+  background: rgba(226, 232, 240, 0.14);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.imageProgressFill {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #38bdf8, #7c3aed);
+  transform-origin: left center;
+  transform: scaleX(0);
+}
+
+.imageProgressFill.active {
+  animation: progressFill 4.3s linear forwards;
+}
+
+@keyframes progressFill {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.projectDetails {
+  flex: 1;
+  min-width: 260px;
+}
+
+.projectDetails p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.92);
+}
+
+@media (max-width: 840px) {
+  .projectContent {
+    flex-direction: column;
+  }
+
+  .projectHeroImage {
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
 .dpImage {
   width: 160px;
   height: 160px;
@@ -116,6 +193,23 @@ body {
   border-radius: 50%;
   display: block;
   margin: 0;
+  transition: transform 0.6s ease-in-out;
+}
+
+.dpImage.flip {
+  animation: flipOnce 0.6s ease-in-out forwards;
+}
+
+@keyframes flipOnce {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
 }
 
 .profileText {
