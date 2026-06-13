@@ -11,7 +11,7 @@ export default function Main() {
         <a href="https://www.linkedin.com/in/harikrishna-h-601b05147/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <img src="/linkedin.png" alt="LinkedIn" />
         </a>
-        <a href="https://github.com/patriotharikrishna" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <a href="https://github.com/patriotharikrishna/MyPersonalWebsite" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
           <img src="/github.png" alt="GitHub" />
         </a>
       </div>
@@ -28,7 +28,7 @@ export default function Main() {
       <section className="projectsSection">
         <h1>Projects</h1>
         <article className="projectCard">
-          <a href="https://analyseresume.netlify.app/">
+          <a href="https://analyseresume.netlify.app/" target="_blank">
             <div className="projectHeader">
             <h2>ResAi</h2>
             <span className="projectTag">AI · Resume Tool</span>
